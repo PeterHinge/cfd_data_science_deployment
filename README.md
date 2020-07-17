@@ -1,4 +1,4 @@
-cookie_deploy
+cfd_data_science_deployment
 ==============================
 
 A short description of the project.
