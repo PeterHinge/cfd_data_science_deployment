@@ -1,12 +1,12 @@
 
 from fastapi import APIRouter
 
-from deployment_example.app.models.heartbeat import HearbeatResult
+from src.app.models.heartbeat import HeartbeatResult
 
 router = APIRouter()
 
 
-@router.get("/heartbeat", response_model=HearbeatResult, name="heartbeat")
-def get_hearbeat() -> HearbeatResult:
-    heartbeat = HearbeatResult(is_alive=True)
+@router.get("/heartbeat", response_model=HeartbeatResult, name="heartbeat")
+def get_hearbeat() -> HeartbeatResult:
+    heartbeat = HeartbeatResult(is_alive=True)
     return heartbeat

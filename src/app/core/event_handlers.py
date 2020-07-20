@@ -1,16 +1,15 @@
-
 from typing import Callable
 
 from fastapi import FastAPI
 from loguru import logger
 
-from deployment_example.app.core.config import DEFAULT_MODEL_PATH
-from deployment_example.app.services.models import HousePriceModel
+from src.app.core.config import DEFAULT_MODEL_PATH
+from src.app.services.models import PredictionModel
 
 
 def _startup_model(app: FastAPI) -> None:
     model_path = DEFAULT_MODEL_PATH
-    model_instance = HousePriceModel(model_path)
+    model_instance = PredictionModel(model_path)
     app.state.model = model_instance
 
 

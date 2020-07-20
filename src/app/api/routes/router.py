@@ -1,8 +1,6 @@
-
-
 from fastapi import APIRouter
 
-from deployment_example.app.api.routes import heartbeat, prediction
+from src.app.api.routes import heartbeat, prediction
 
 api_router = APIRouter()
 api_router.include_router(heartbeat.router, tags=["health"], prefix="/health")

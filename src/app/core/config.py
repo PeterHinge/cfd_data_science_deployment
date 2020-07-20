@@ -1,10 +1,8 @@
-
-
 from starlette.config import Config
 from starlette.datastructures import Secret
 
 APP_VERSION = "0.0.1"
-APP_NAME = "House Price Prediction Example"
+APP_NAME = "Name of Application"
 API_PREFIX = "/api"
 
 config = Config(".env")

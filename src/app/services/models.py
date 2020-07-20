@@ -1,44 +1,32 @@
 from typing import List
 
-import joblib
-import numpy as np
 from loguru import logger
 
-from deployment_example.app.core.messages import NO_VALID_PAYLOAD
-from deployment_example.app.models.payload import (HousePredictionPayload,
-                                             payload_to_list)
-from deployment_example.app.models.prediction import HousePredictionResult
+from src.app.core.messages import NO_VALID_PAYLOAD
+from src.app.models.payload import PredictionPayload, payload_to_list
+from src.app.models.prediction import PredictionResult
 
 
 class HousePriceModel(object):
-
-    RESULT_UNIT_FACTOR = 1
-
     def __init__(self, path):
         self.path = path
-        self._load_local_model()
 
-    def _load_local_model(self):
-        self.model = joblib.load(self.path)
-
-    def _pre_process(self, payload: HousePredictionPayload) -> List:
+    def _pre_process(self, payload: PredictionPayload) -> List:
         logger.debug("Pre-processing payload.")
-        result = np.asarray(payload_to_list(payload)).reshape(1, -1)
+        result = payload_to_list(payload)
         return result
 
-    def _post_process(self, prediction: np.ndarray) -> HousePredictionResult:
+    def _post_process(self, prediction: List) -> PredictionResult:
         logger.debug("Post-processing prediction.")
-        result = prediction.tolist()
-        human_readable_unit = result[0] * self.RESULT_UNIT_FACTOR
-        hpp = HousePredictionResult(median_house_value=human_readable_unit)
-        return hpp
+        pr = PredictionResult(result=prediction)
+        return pr
 
     def _predict(self, features: List) -> np.ndarray:
         logger.debug("Predicting.")
-        prediction_result = self.model.predict(features)
+        prediction_result = features  # simply returns input feature. Inset your model prediction here
         return prediction_result
 
-    def predict(self, payload: HousePredictionPayload):
+    def predict(self, payload: PredictionPayload) -> PredictionResult:
         if payload is None:
             raise ValueError(NO_VALID_PAYLOAD.format(payload))
 

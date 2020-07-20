@@ -1,3 +1,8 @@
+numpy
+pydantic
+loguru
+starlette
+fastapi
 # local package
 -e .
 
