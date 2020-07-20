@@ -21,7 +21,7 @@ class HousePriceModel(object):
         pr = PredictionResult(result=prediction)
         return pr
 
-    def _predict(self, features: List) -> np.ndarray:
+    def _predict(self, features: List) -> List:
         logger.debug("Predicting.")
         prediction_result = features  # simply returns input feature. Inset your model prediction here
         return prediction_result
