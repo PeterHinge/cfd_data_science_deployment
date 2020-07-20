@@ -31,16 +31,17 @@ Project Organization
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
     │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
+    ├── setup.py           <- Makes project pip installable (pip install -e .) so src can be imported
     ├── src                <- Source code for use in this project.
     │   ├── __init__.py    <- Makes src a Python module
     │   │
-    │   ├── app            <- api application
+    │   ├── app            <- API application
     │   │   ├── api
-    │   │   ├── core
-    │   │   ├── models
+    │   │   │   └── routes 
+    │   │   ├── core       <- API configs, event-handlers, messages, security etc.
+    │   │   ├── models     <- The models for payload, prediction-result, heartbeat etc.
     │   │   ├── services
-    │   │   └── main.py
+    │   │   └── main.py    <- FastAPI app
     │   │
     │   ├── data           <- Scripts to download or generate data
     │   │   └── make_dataset.py
@@ -56,7 +57,7 @@ Project Organization
     │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
     │       └── visualize.py
     │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+    └── tox.ini            <- Tox file with settings for running tox; see tox.readthedocs.io
 
 
 --------
