@@ -13,13 +13,13 @@ class HousePriceModel(object):
 
     def _pre_process(self, payload: PredictionPayload) -> List:
         logger.debug("Pre-processing payload.")
-        result = payload_to_list(payload)
-        return result
+        pre_processed_payload = payload_to_list(payload)
+        return pre_processed_payload
 
     def _post_process(self, prediction: List) -> PredictionResult:
         logger.debug("Post-processing prediction.")
-        pr = PredictionResult(result=prediction)
-        return pr
+        post_processed_result = PredictionResult(result=prediction)
+        return post_processed_result
 
     def _predict(self, features: List) -> List:
         logger.debug("Predicting.")
