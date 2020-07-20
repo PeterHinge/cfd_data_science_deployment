@@ -1,5 +1,4 @@
-Cookiecutter, FastAPI, Docker blueprint for Data Science Deployment
-==============================
+# Cookiecutter, FastAPI, Docker blueprint for Data Science Deployment
 
 Disclaimer: I didn't make this blueprint from scratch - I simply combined some of my favorite frameworks for DS model deployment. 1) Cookiecutter for project structure. 2) FastAPI for deploying model/program as a RESTful webservise. 3) Docker for having the model/program containerized.
 
@@ -56,7 +55,7 @@ Project Organization
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
 
-# Model deployment
+## Model deployment
 Serving machine learning models production-ready, fast, easy and secure powered by the great FastAPI by [Sebastián Ramírez]([)](https://github.com/tiangolo).
 
 To experiment and get a feeling on how to use this skeleton, a sample regression model for house price prediction is included in this project. Follow the installation and setup instructions to run the sample model and serve it aso RESTful API.
