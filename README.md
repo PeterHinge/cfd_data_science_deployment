@@ -1,4 +1,4 @@
-# Cookiecutter, FastAPI, Docker blueprint for Data Science Deployment
+# BLUEPRINT: Cookiecutter + FastAPI + Docker for Data Science Deployment
 
 Disclaimer: I didn't make this blueprint from scratch - I simply combined some of my favorite frameworks for DS model deployment. 1) Cookiecutter for project structure. 2) FastAPI for deploying model/program as a RESTful webservise. 3) Docker for having the model/program containerized.
 
