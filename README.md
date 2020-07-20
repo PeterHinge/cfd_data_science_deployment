@@ -34,6 +34,13 @@ Project Organization
     ├── src                <- Source code for use in this project.
     │   ├── __init__.py    <- Makes src a Python module
     │   │
+    │   ├── app            <- api application
+    │   │   ├── api
+    │   │   ├── core
+    │   │   ├── models
+    │   │   ├── services
+    │   │   └── main.py
+    │   │
     │   ├── data           <- Scripts to download or generate data
     │   │   └── make_dataset.py
     │   │
