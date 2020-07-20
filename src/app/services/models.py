@@ -7,7 +7,7 @@ from src.app.models.payload import PredictionPayload, payload_to_list
 from src.app.models.prediction import PredictionResult
 
 
-class HousePriceModel(object):
+class PredictionModel(object):
     def __init__(self, path):
         self.path = path
 

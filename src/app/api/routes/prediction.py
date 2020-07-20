@@ -4,7 +4,7 @@ from starlette.requests import Request
 from src.app.core import security
 from src.app.models.payload import PredictionPayload
 from src.app.models.prediction import PredictionResult
-from src.app.services.models import HousePriceModel
+from src.app.services.models import PredictionModel
 
 router = APIRouter()
 
@@ -16,7 +16,7 @@ def post_predict(
     block_data: PredictionPayload = None
 ) -> PredictionResult:
 
-    model: HousePriceModel = request.app.state.model
+    model: PredictionModel = request.app.state.model
     prediction: PredictionResult = model.predict(block_data)
 
     return prediction
