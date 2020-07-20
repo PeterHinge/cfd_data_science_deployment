@@ -128,7 +128,7 @@ docker run -d --name deployment_example -p 8000:80 deployment_example
 
 ## Test in Notebook
 1. Run `jupyter lab` in a terminal
-2. Open the notebook in `notebooks/api_test.ipynb`
+2. Open the notebook in `notebooks/0.1-api-test.ipynb`
 
 ## Run Tests
 
