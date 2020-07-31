@@ -62,9 +62,9 @@ Project Organization
     └── tox.ini            <- Tox file with settings for running tox; see tox.readthedocs.io
 
 
---------
-
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
+--------
 
 ## Model deployment
 Serving machine learning models production-ready, fast, easy and secure powered by the great FastAPI by [Sebastián Ramírez]([)](https://github.com/tiangolo).
