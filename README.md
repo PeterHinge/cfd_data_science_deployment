@@ -99,7 +99,7 @@ python setup.py develop
 
 4. Train and save the model
 ```bash
-python deployment_example/models/train_model.py
+python src/models/train_model.py
 ```
 This will download the data, train the model and save it to `models/`.
 
@@ -107,7 +107,7 @@ This will download the data, train the model and save it to `models/`.
 
 1. Start your  app with: 
 ```bash
-uvicorn deployment_example.app.main:app
+uvicorn src.app.main:app
 ```
 2. Go to [http://localhost:8000/docs](http://localhost:8000/docs).
    
@@ -119,12 +119,12 @@ uvicorn deployment_example.app.main:app
 1. Edit `Dockerfile` if necessary
 2. Build the docker image
 ```bash
-docker build -t deployment_example .
+docker build -t src .
 ```
 
 3. Deploy the image in a container
 ```bash
-docker run -d --name deployment_example -p 8000:80 deployment_example
+docker run -d --name src -p 8000:80 src
 ```
 
 ## Test in Notebook
