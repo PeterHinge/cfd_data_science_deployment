@@ -4,6 +4,8 @@ Disclaimer: I didn't make this blueprint from scratch - I simply combined some o
 
 Credit for this idea goes to my collague <a target="_blank" href="https://github.com/simonkamronn">Simon Kamronn</a>
 
+--------
+
 Project Organization
 ------------
 
