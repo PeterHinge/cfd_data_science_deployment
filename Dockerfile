@@ -1,8 +1,8 @@
 FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8
 
-ENV DEFAULT_MODEL_PATH=/app/models/california_house_regression.joblib
+ENV DEFAULT_MODEL_PATH=/app/models/prediction.joblib
 ENV API_KEY=sample_api_key
-ENV APP_MODULE="deployment_example.app.main:app"
+ENV APP_MODULE="src.app.main:app"
 ENV PYTHONPATH=/app
 
 COPY . /app
