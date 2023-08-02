@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/peterhinge/cfd_data_science_deployment/blob/master/LICENSE)
 [![Contributors](https://img.shields.io/github/contributors/peterhinge/cfd_data_science_deployment.svg)](https://github.com/peterhinge/cfd_data_science_deployment/graphs/contributors)
 
-Disclaimer: I didn't make this blueprint from scratch - I simply combined some of my favorite frameworks for DS model deployment. 1) Cookiecutter for project structure. 2) FastAPI for deploying model/program as a RESTful webservise. 3) Docker for having the model/program containerized.
+Disclaimer: I didn't make this blueprint from scratch - I simply combined some of my favorite frameworks for DS model deployment. 1) Cookiecutter framework for project structure. 2) FastAPI for deploying model/program as a RESTful webservice. 3) Docker for having the model/program containerized.
 
 Credit for this idea goes to my colleague <a target="_blank" href="https://github.com/simonkamronn">Simon Kamronn</a>
 
