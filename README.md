@@ -158,3 +158,7 @@ tox
 ```
 
 This runs tests and coverage for Python 3.6 and Flake8, Autopep8, Bandit.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
